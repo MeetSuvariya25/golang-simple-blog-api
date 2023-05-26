@@ -17,24 +17,24 @@ func InitializeUserRoutes(router *gin.Engine, db *gorm.DB) {
 	})
 
 	// GET handler to list all the Users
-	router.GET("/users", controller.GetAllUser)
+	router.GET("/api/v1/users", controller.GetAllUser)
 
 	// GET handler to find the user by ID
-	router.GET("/users/:id", controller.GetUserByID)
+	router.GET("/api/v1/users/:id", controller.GetUserByID)
 
 	// POST handler to signup as a new user
-	router.POST("/signup", controller.SignUp)
+	router.POST("/api/v1/signup", controller.SignUp)
 
 	// POST handler to login
-	router.POST("/login", controller.Login)
+	router.POST("/api/v1/login", controller.Login)
 
 	// GET handler to login
-	router.GET("/logout", middleware.RequiredAuth, controller.Logout)
+	router.GET("/api/v1/logout", middleware.RequiredAuth, controller.Logout)
 
 	// PUT handler to update a user
-	router.PUT("/users/:id", middleware.RequiredAuth, controller.UpdateUser)
+	router.PUT("/api/v1/users/:id", middleware.RequiredAuth, controller.UpdateUser)
 
 	// DELETE handler to delete a user
-	router.DELETE("/users/:id", controller.DeleteUser)
+	router.DELETE("/api/v1/users/:id", controller.DeleteUser)
 
 }
