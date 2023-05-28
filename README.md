@@ -39,7 +39,7 @@ Along with that I have added pagination to the API so that only a certain number
 {
     "id": 4,
     "name": "MS1",
-    "email": "msuvariya2@gmail.com"
+    "email": "msuvariya1@gmail.com"
 }
 ```
 
